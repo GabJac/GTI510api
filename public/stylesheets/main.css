@@ -1,0 +1,99 @@
+.login_form{
+    width: 20em;
+    height: 23em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 1.5em;
+    box-shadow: 1px 2px 5px;
+    background-color: white;
+}
+
+.login_title {
+    font-weight: bold;
+    font-size: 2.5em;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.login_button {
+    margin: 0.5em;
+    flex: 1;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile_page {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    text-align: center;
+}
+
+.login_background {
+    background-color: rgba(230, 230, 230, 0.3);
+}
+
+.register_form {
+    width: 25em;
+    height: 38em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 1.5em;
+    box-shadow: 1px 2px 5px;
+    background-color: white;
+}
+
+.register_button {
+    margin: 0.5em;
+    width: 10em;
+}
+
+.profile_form {
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 1.5em;
+    box-shadow: 1px 2px 5px;
+    background-color: white;
+    margin-right: 1.5em;
+    width: 40%;
+    order:2;
+}
+
+.profile_upload {
+    width: 60%;
+    height: 100%;
+    order:1;
+}
+
+.full_height {
+    height: 93%;
+}
+
+.no_flow {
+    overflow: hidden;
+}
+
+.profile_picture_container {
+    height: 20em;
+    width: 20em;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 2px 5px;
+    display: inline-block;
+    background-color: white;
+}
+
+.profile_icon {
+    font-size: 15em;
+    margin-top: 0.2em;
+    color: rgba(0, 0, 0, 0.1);
+}

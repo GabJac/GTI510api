@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+<html lang="en" class="full_height">
+    @header()
+<body class="login_background full_height no_flow">
+    <div class="profile_page">
+        <div class="profile_upload">
+                <div class="profile_picture_container">
+                    <span class="profile_icon glyphicon glyphicon-user"></span>
+                </div>
+                <button>Upload picture</button>
+        </div>
+    <div class="profile_form">
+        <form method="POST" action=login>
+            <div class="login_title">Profile</div>
+            <div class="form-group">
+                <label for="firstNameInput">First name</label>
+                <input type="text" class="form-control" id="firstNameInput" placeholder="First name">
+            </div>
+            <div class="form-group">
+                <label for="lastNameInput">Last name</label>
+                <input type="text" class="form-control" id="lastNameInput" placeholder="Last name">
+            </div>
+            <div class="form-group">
+                <label for="emailInput">Email</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="usernameInput">Username</label>
+                <input type="text" class="form-control" id="usernameInput" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="passwordInput">Password</label>
+                <input type="password" class="form-control" id="passwordInput" placeholder="Password">
+            </div>
+            <div class="horizontal">
+                <button type="submit" class="btn btn-primary center-block register_button">Submit</button>
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

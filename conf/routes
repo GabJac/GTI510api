@@ -1,0 +1,14 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET      /                          controllers.LoginController.getLoginPage()
+GET      /login                     controllers.LoginController.getLoginPage()
+GET      /register                  controllers.UserController.register()
+GET      /profile                   controllers.UserController.profile()
++ nocsrf
+POST     /login                     controllers.LoginController.login()
+DELETE   /logout                    controllers.LoginController.logout()
+
+GET     /assets/*file               controllers.Assets.at(file)
