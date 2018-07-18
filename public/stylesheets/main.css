@@ -40,6 +40,10 @@
     background-color: rgba(230, 230, 230, 0.3);
 }
 
+.white {
+    background-color: white;
+}
+
 .register_form {
     width: 25em;
     height: 38em;
@@ -92,10 +96,39 @@
     background-color: white;
 }
 
+.small_profile_picture_container {
+    height: 3em;
+    width: 3em;
+    margin: 0.3em;
+    display: inline-block;
+    background-color: white;
+}
+
 .profile_icon {
     font-size: 15em;
     margin-top: 0.2em;
     color: rgba(0, 0, 0, 0.1);
+}
+
+.small_profile_icon {
+    font-size: 2.5em;
+    margin-top: 0.2em;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.comment_author {
+    font-size: 0.8em;
+    color: black;
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+    margin-left: 1em;
+}
+
+.comment_text {
+    margin-top: 1em;
+    margin-bottom: 1.6em;
+    margin-left: 1em;
+    font-family:proxima-nova, sans-serif !important;
 }
 
 .vertical {
@@ -103,6 +136,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.vertical2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .upload_profile_button {
@@ -135,14 +174,40 @@
 }
 
 .summary_title {
-    font-size: 2.2em;
-    margin-bottom: 0.5em;
+    font-size: 2em;
+    margin-bottom: 0.8em;
+}
+
+.summary_tile_a {
+    font-family:proxima-nova, sans-serif !important;
     color: rgb(25, 25, 25);
 }
 
-.summary_title:hover {
+.summary_tile_a:hover {
     color: grey;
     text-decoration: none;
+}
+
+.author {
+    color: #231f20;
+    font-family:proxima-nova, sans-serif !important;
+    font-size: 1em;
+    margin-top: 2em;
+    float: right;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.comment {
+    margin-top: 2em;
+    border: solid 1px rgb(210, 210, 210);
+}
+
+.empty_comment {
+    width: 100%;
+    height: 8em !important;
+    margin-top: 2em;
+    border: solid 1px rgb(210, 210, 210);
 }
 
 .error {
@@ -155,4 +220,13 @@
     color: green;
     text-align: center;
     margin: 0.5em;
+}
+
+.fill {
+    width: 100%;
+}
+
+.comment_button {
+    margin-top: 1em;
+    margin-bottom: 1em !important;
 }
