@@ -1,0 +1,18 @@
+@(articles: List[model.Article], logged: Boolean)
+
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+<html lang="en">
+    @header(logged)
+<body class="login_background">
+    <div class="summary">
+    @for(article <- articles){
+        <div class="article_summary">
+            <div class="summary_title"><a href="/article/@article.getId">@article.getTitle</a></div>
+            <div class="text_summary">@article.getText</div>
+            <hr>
+        </div>
+    }
+    </div>
+</body>
+</html>

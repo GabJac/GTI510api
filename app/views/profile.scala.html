@@ -1,41 +1,44 @@
+@(user: model.Utilisateur, updated: Boolean)
+
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
 <html lang="en" class="full_height">
-    @header()
+    @header(user.getUserId != null)
 <body class="login_background full_height no_flow">
     <div class="profile_page">
         <div class="profile_upload">
+            <div class="vertical">
                 <div class="profile_picture_container">
                     <span class="profile_icon glyphicon glyphicon-user"></span>
                 </div>
-                <button>Upload picture</button>
+                <button class="upload_profile_button">Upload picture</button>
+            </div>
         </div>
     <div class="profile_form">
-        <form method="POST" action=login>
+        <form method="post" action=@routes.UserController.updateUser()>
             <div class="login_title">Profile</div>
             <div class="form-group">
                 <label for="firstNameInput">First name</label>
-                <input type="text" class="form-control" id="firstNameInput" placeholder="First name">
+                <input type="text" class="form-control" id="firstNameInput" placeholder="First name" name="firstName" value=@user.getPrenom()>
             </div>
             <div class="form-group">
                 <label for="lastNameInput">Last name</label>
-                <input type="text" class="form-control" id="lastNameInput" placeholder="Last name">
+                <input type="text" class="form-control" id="lastNameInput" placeholder="Last name" name="lastName" value=@user.getNom()>
             </div>
             <div class="form-group">
                 <label for="emailInput">Email</label>
-                <input type="email" class="form-control" id="emailInput" placeholder="Email">
+                <input type="email" class="form-control" id="emailInput" placeholder="Email" name="email" value=@user.getEmail()>
             </div>
             <div class="form-group">
-                <label for="usernameInput">Username</label>
-                <input type="text" class="form-control" id="usernameInput" placeholder="Username">
-            </div>
-            <div class="form-group">
-                <label for="passwordInput">Password</label>
-                <input type="password" class="form-control" id="passwordInput" placeholder="Password">
+                <label for="passwordInput">New password (optional)</label>
+                <input type="password" class="form-control" id="passwordInput" placeholder="New password" name="password">
             </div>
             <div class="horizontal">
                 <button type="submit" class="btn btn-primary center-block register_button">Submit</button>
             </div>
+            @if(updated) {
+                <div class="success">Updated</div>
+            }
         </form>
     </div>
     </div>

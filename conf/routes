@@ -7,8 +7,18 @@ GET      /                          controllers.LoginController.getLoginPage()
 GET      /login                     controllers.LoginController.getLoginPage()
 GET      /register                  controllers.UserController.register()
 GET      /profile                   controllers.UserController.profile()
+GET      /article                   controllers.ArticleController.article()
+GET     /article/:id                controllers.ArticleController.showArticle(id)
+
 + nocsrf
 POST     /login                     controllers.LoginController.login()
-DELETE   /logout                    controllers.LoginController.logout()
+GET   /logout                    controllers.LoginController.logout()
+
++ nocsrf
+POST     /register                     controllers.UserController.createUser()
+
++ nocsrf
+POST     /profile                     controllers.UserController.updateUser()
+
 
 GET     /assets/*file               controllers.Assets.at(file)

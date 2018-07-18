@@ -1,14 +1,14 @@
 package business.dao;
 
-import model.User;
+import model.Utilisateur;
 
 public class UserDao {
 
-    public User getUserFromUsername(String username) {
-        return null;
+    public Utilisateur getUserFromUsername(String username) {
+        return Utilisateur.find.query().where().eq("email", username).findOne();
     }
 
-    public User getUser(int userId) {
-        return null;
+    public Utilisateur getUser(int userId) {
+        return Utilisateur.find.byId(Long.valueOf(userId));
     }
 }

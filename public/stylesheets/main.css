@@ -97,3 +97,62 @@
     margin-top: 0.2em;
     color: rgba(0, 0, 0, 0.1);
 }
+
+.vertical {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload_profile_button {
+    margin-top: 1em;
+}
+
+.article_summary {
+    width: 80%;
+    margin: 2em;
+}
+
+.summary {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    margin-left: 6em;
+}
+
+.text_summary {
+    font-family:proxima-nova, sans-serif !important;
+    font-style: normal;
+    font-size: 12px;
+    font-weight:400;
+    letter-spacing: 3px;
+    color: #231f20;
+    text-transform: uppercase;
+    line-height: 1.5em;
+}
+
+.summary_title {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+    color: rgb(25, 25, 25);
+}
+
+.summary_title:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin: 0.5em;
+}
+
+.success {
+    color: green;
+    text-align: center;
+    margin: 0.5em;
+}

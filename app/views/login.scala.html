@@ -1,23 +1,28 @@
+@(error: Boolean)
+
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
 <html lang="en">
-    @header()
+    @header(false)
     <body class="login_background">
         <div class="login_form">
         <form method="POST" action=login>
             <div class="login_title">Login</div>
             <div class="form-group">
-                <label for="usernameInput">Username</label>
-                <input type="username" class="form-control" id="usernameInput" placeholder="Username"/>
+                <label for="emailInput">Username</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="Email" name="email"/>
             </div>
             <div class="form-group">
                 <label for="inputPassword">Password</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password"/>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password"/>
             </div>
             <div class="horizontal">
                 <button type="submit" name="submitButton" class="btn btn-primary login_button">Login</button>
                 <a href="/register"><button type="button" class="btn btn-primary login_button">Register</button></a>
             </div>
+            @if(error) {
+                <div class="error">Invalid email or password</div>
+            }
         </form>
         </div>
     </body>

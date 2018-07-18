@@ -1,7 +1,7 @@
 package business.manager;
 
 import business.dao.UserDao;
-import model.User;
+import model.Utilisateur;
 
 import java.util.Objects;
 
@@ -25,9 +25,9 @@ public class PermissionManager {
         }
 
         UserDao dao = new UserDao();
-        User user = dao.getUser(Integer.parseInt(userId));
+        Utilisateur user = dao.getUser(Integer.parseInt(userId));
 
-        if (!user.isAdmin()) {
+        if (!user.getStatut().equals("admin")) {
             throw new RuntimeException("Cannot do that!!!!!!!");
         }
 
