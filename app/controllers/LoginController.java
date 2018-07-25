@@ -20,6 +20,10 @@ public class LoginController extends AbstractController {
         this.formFactory = formFactory;
     }
 
+    public static Result returnok() {
+        return ok();
+    }
+
     public Result login() {
         DynamicForm requestData = formFactory.form().bindFromRequest();
         Utilisateur user = new Utilisateur();

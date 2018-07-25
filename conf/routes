@@ -22,3 +22,5 @@ POST     /profile                     controllers.UserController.updateUser()
 
 
 GET     /assets/*file               controllers.Assets.at(file)
+
+GET /loaderio-ed40c3f5ab27e71ff1a5d42620ef0599 controllers.LoginController.returnok()
