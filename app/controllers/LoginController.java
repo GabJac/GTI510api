@@ -20,7 +20,7 @@ public class LoginController extends AbstractController {
         this.formFactory = formFactory;
     }
 
-    public static Result returnok() {
+    public Result returnok() {
         return ok();
     }
 
