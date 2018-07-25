@@ -26,9 +26,10 @@
                 <div class="comment_text">Such a beautiful article.. Much wow!</div>
             </div>
 
-            <form class="fill">
-                <textarea class="form-control empty_comment" placeholder="Comment"></textarea>
-                <button class="btn btn-primary comment_button">Post</button>
+            <form method="POST" class="fill" action="comment">
+                <input type="hidden" name="articleId" value=@article.getId >
+                <textarea class="form-control empty_comment" placeholder="Comments" name="comment"></textarea>
+                <button class="btn btn-primary comment_button" type="submit">Post</button>
             </form>
         </div>
     </body>

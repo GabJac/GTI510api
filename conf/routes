@@ -20,6 +20,9 @@ POST     /register                     controllers.UserController.createUser()
 + nocsrf
 POST     /profile                     controllers.UserController.updateUser()
 
++ nocsrf
+POST     /article/comment                     controllers.CommentController.createComment()
+
 
 GET     /assets/*file               controllers.Assets.at(file)
 

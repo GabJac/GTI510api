@@ -1,18 +1,16 @@
 package business.manager;
 
 import business.dao.CommentDao;
-import model.Comment;
+import model.Comments;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 import static play.mvc.Controller.session;
 
 public class CommentManager {
 
-    public Comment createComment(Comment comment) {
-        comment.setAuthor(getUserIdFromSession());
+    public Comments createComment(Comments comment) {
+//        comment.setAuthor(getUserIdFromSession());
         comment.setCreationDate(LocalDateTime.now());
 
         CommentDao dao = new CommentDao();

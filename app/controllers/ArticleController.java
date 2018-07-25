@@ -1,8 +1,10 @@
 package controllers;
 
 import business.dao.ArticleDao;
+import business.dao.CommentDao;
 import business.manager.PermissionManager;
 import model.Article;
+import model.Comments;
 import play.mvc.Result;
 import views.html.article;
 import views.html.completeArticle;
@@ -74,6 +76,11 @@ public class ArticleController extends AbstractController {
                 "Novo denique perniciosoque exemplo idem Gallus ausus est inire flagitium grave, quod Romae cum ultimo dedecore temptasse aliquando dicitur Gallienus, et adhibitis paucis clam ferro succinctis vesperi per tabernas palabatur et conpita quaeritando Graeco sermone, cuius erat inpendio gnarus, quid de Caesare quisque sentiret. et haec confidenter agebat in urbe ubi pernoctantium luminum claritudo dierum solet imitari fulgorem. postremo agnitus saepe iamque, si prodisset, conspicuum se fore contemplans, non nisi luce palam egrediens ad agenda quae putabat seria cernebatur. et haec quidem medullitus multis gementibus agebantur.");
 
         ar.setAuthor("Bruce Wayne");
+        ar.setId(1);
+
+        CommentDao commentDao =new CommentDao();
+        List<Comments> comments = commentDao.listCommentFromArticle(1);
+
         return ok(completeArticle.render(ar, session().get("user") != null));
     }
 }
