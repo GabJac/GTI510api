@@ -9,7 +9,7 @@
     @for(article <- articles){
         <div class="article_summary">
             <div class="summary_title"><a class="summary_tile_a" href="/article/@article.getId">@article.getTitle</a></div>
-            <div class="text_summary">@article.getText</div>
+            <div class="text_summary">@article.getText.substring(0, 250).concat("...")</div>
             <hr>
         </div>
     }

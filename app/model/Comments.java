@@ -5,6 +5,7 @@ import io.ebean.Finder;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.time.LocalDateTime;
 
 import static javax.persistence.GenerationType.SEQUENCE;
@@ -20,6 +21,8 @@ public class Comments extends AbstractModel {
     private Integer previousCommentId;
     private Integer articleId;
     private LocalDateTime creationDate;
+    @Transient
+    private String userName;
 
     public Integer getId() {
         return id;
@@ -67,6 +70,14 @@ public class Comments extends AbstractModel {
 
     public void setCreationDate(LocalDateTime creationDate) {
         this.creationDate = creationDate;
+    }
+
+    public String getUserName() {
+        return userName != null ? userName : "";
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public static final Finder<Long, Comments> find = new Finder<>(Comments.class);
